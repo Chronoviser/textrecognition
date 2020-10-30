@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/capture_buttonID"
+        android:orientation="vertical"
+        android:layout_margin="4dp"
+        android:weightSum="2">
+        <ImageView
+            android:id="@+id/imageviewID"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp" />
+        <TextView
+            android:id="@+id/textviewID"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:layout_marginTop="4dp"
+            android:hint="Detected text appears here!"
+            android:textColorHint="#929292"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/capture_buttonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capture Image"
+        android:textSize="24sp"
+        android:layout_above="@id/detect_buttonID"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="2dp"
+        android:textColor="#fff"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/detect_buttonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detect Text"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:textSize="24sp"
+        android:textColor="#fff"
+        android:background="@color/colorPrimaryDark"
+        android:textStyle="bold"/>
+</RelativeLayout>
